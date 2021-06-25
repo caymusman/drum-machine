@@ -54,6 +54,7 @@ body {
 }
 
 #toShow h1 {
+  font-size: 3.5vmax;
   color: #8c8c8c;
 }
 
@@ -65,12 +66,13 @@ body {
   background-color: #8c8c8c;
   border: none;
   color: white;
-  padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
-  font-size: 16px;
   border-radius: 5px;
+  -webkit-transition: -webkit-box-shadow .15s;
+  transition: -webkit-box-shadow .15s;
+  transition: box-shadow .15s;
+  transition: box-shadow .15s, -webkit-box-shadow .15s;
 }
 
 #toShow #initBtn:hover {
