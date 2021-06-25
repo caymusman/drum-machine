@@ -1,0 +1,166 @@
+//d5e5dd
+$mainColor: #ffffff;
+$darkMain: darken($mainColor, 30%);
+$darker: darken($darkMain, 10%);
+$darkest: darken($darkMain, 15%);
+
+body{
+  background: $mainColor;
+  background-image: url("/img/batthern.png");
+  font-size: 20px;
+  min-height: 500px;
+}
+
+#mainDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.powerOff{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1.5s, opacity 1.5s linear;
+}
+
+.powerOn{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 1.5s, opacity 1.5s linear;
+}
+
+.btn{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  transition-duration: 1s;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+#toShow{
+  position: fixed;
+  h1{
+    color: $darkest;
+  }
+  #initBtn{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: $darkest;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition-duration: 1s;
+    
+    &:hover{
+      transition-duration: .27s;
+      box-shadow: 1px 2px 2px 1px gray;
+    }
+    
+    &:active{
+    transition-duration: 0s;
+    background-color: $darkest;
+  }
+  }
+}
+
+
+
+
+#toHide{
+  position: fixed;
+  width: 70%;
+  height: 100%;
+
+  #drum-machine{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    min-width: 50%;
+    display: flex;
+
+    #pads{
+      background: $darkMain;
+      border-style: solid;
+      border-color: $darkest;
+      border-width: thick;
+      box-shadow: 1px 1px 2px 1px gray;
+      height: 25vmax;
+      width: 25vmax;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+
+      #padBlock{
+        width: 30%;
+        min-height: 20%;
+        max-height: 30%;
+        text-align: center;
+        border-radius: 6px;
+        margin: 1%;
+        box-shadow: 1px 1px 2px 1px gray;
+        a{
+          display: block;
+          position: relative;
+          bottom: -30%;
+          font-size: 3vmax; 
+          font-weight: bold;
+          color: gray;
+        }
+        &:hover{  
+          cursor: pointer;
+        } 
+      }
+    }
+    #display{
+      button{
+        background-color: $darkest;
+        &:hover{
+          transition-duration: .1s;
+          box-shadow: 1px 1px 2px 1px gray;
+        }
+        &:active{
+          transition-duration: 0s;
+          background-color: $darkest;
+        }
+        margin: 5px;
+      }
+      #nameDiv{
+        border-style: solid;
+        border-color: $darkest;
+        border-width: thick;
+        box-shadow: 1px 1px 2px 1px gray;
+        background: $mainColor;
+        text-align: center;
+        p{
+        color: gray;
+        }
+      }
+      margin: auto;
+    }
+  }
+}
+
+.inactive{
+  background: $mainColor;
+}
+.active{
+  background: $darker;
+}
+

@@ -1,0 +1,199 @@
+body {
+  background: #ffffff;
+  background-image: url("/img/batthern.png");
+  font-size: 20px;
+  min-height: 500px;
+}
+
+#mainDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.powerOff {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 1.5s, opacity 1.5s linear;
+  transition: visibility 1.5s, opacity 1.5s linear;
+}
+
+.powerOn {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 1.5s, opacity 1.5s linear;
+  transition: visibility 1.5s, opacity 1.5s linear;
+}
+
+.btn {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+#toShow {
+  position: fixed;
+}
+
+#toShow h1 {
+  color: #8c8c8c;
+}
+
+#toShow #initBtn {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background-color: #8c8c8c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+#toShow #initBtn:hover {
+  -webkit-transition-duration: .27s;
+          transition-duration: .27s;
+  -webkit-box-shadow: 1px 2px 2px 1px gray;
+          box-shadow: 1px 2px 2px 1px gray;
+}
+
+#toShow #initBtn:active {
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+  background-color: #8c8c8c;
+}
+
+#toHide {
+  position: fixed;
+  width: 70%;
+  height: 100%;
+}
+
+#toHide #drum-machine {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 50%;
+  min-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#toHide #drum-machine #pads {
+  background: #b3b3b3;
+  border-style: solid;
+  border-color: #8c8c8c;
+  border-width: thick;
+  -webkit-box-shadow: 1px 1px 2px 1px gray;
+          box-shadow: 1px 1px 2px 1px gray;
+  height: 25vmax;
+  width: 25vmax;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#toHide #drum-machine #pads #padBlock {
+  width: 30%;
+  min-height: 20%;
+  max-height: 30%;
+  text-align: center;
+  border-radius: 6px;
+  margin: 1%;
+  -webkit-box-shadow: 1px 1px 2px 1px gray;
+          box-shadow: 1px 1px 2px 1px gray;
+}
+
+#toHide #drum-machine #pads #padBlock a {
+  display: block;
+  position: relative;
+  bottom: -30%;
+  font-size: 3vmax;
+  font-weight: bold;
+  color: gray;
+}
+
+#toHide #drum-machine #pads #padBlock:hover {
+  cursor: pointer;
+}
+
+#toHide #drum-machine #display {
+  margin: auto;
+}
+
+#toHide #drum-machine #display button {
+  background-color: #8c8c8c;
+  margin: 5px;
+}
+
+#toHide #drum-machine #display button:hover {
+  -webkit-transition-duration: .1s;
+          transition-duration: .1s;
+  -webkit-box-shadow: 1px 1px 2px 1px gray;
+          box-shadow: 1px 1px 2px 1px gray;
+}
+
+#toHide #drum-machine #display button:active {
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+  background-color: #8c8c8c;
+}
+
+#toHide #drum-machine #display #nameDiv {
+  border-style: solid;
+  border-color: #8c8c8c;
+  border-width: thick;
+  -webkit-box-shadow: 1px 1px 2px 1px gray;
+          box-shadow: 1px 1px 2px 1px gray;
+  background: #ffffff;
+  text-align: center;
+}
+
+#toHide #drum-machine #display #nameDiv p {
+  color: gray;
+}
+
+.inactive {
+  background: #ffffff;
+}
+
+.active {
+  background: #999999;
+}
+/*# sourceMappingURL=styles.css.map */
