@@ -82,6 +82,7 @@ class DrumPad extends React.Component{
                         id={e.text}
                         className={"drum-pad"}
                         letter = {e.letter}
+                        key={e.letter + e.keyCode}
                         keyCode = {e.keyCode}
                         sound = {e.sound}
                         text = {e.text}
@@ -98,7 +99,7 @@ class DrumPad extends React.Component{
     constructor(props){
       super(props);
       this.state = {
-        power: false,
+        power: true,
         bank: 0,
         audioBanks: defAudioBanks,
         display: String.fromCharCode(160)
@@ -174,7 +175,7 @@ class DrumPad extends React.Component{
             </div>
           </div>
           <div id="toShow"
-               class={openPowClass}>
+               className={openPowClass}>
             <h1> Welcome to my Drum Machine </h1>
             <button
                 type="button"

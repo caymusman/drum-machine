@@ -129,6 +129,7 @@ var AllPads = function (_React$Component2) {
             id: e.text,
             className: "drum-pad",
             letter: e.letter,
+            key: e.letter + e.keyCode,
             keyCode: e.keyCode,
             sound: e.sound,
             text: e.text,
@@ -151,7 +152,7 @@ var App = function (_React$Component3) {
     var _this5 = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
     _this5.state = {
-      power: false,
+      power: true,
       bank: 0,
       audioBanks: defAudioBanks,
       display: String.fromCharCode(160)
@@ -257,7 +258,7 @@ var App = function (_React$Component3) {
         React.createElement(
           'div',
           { id: 'toShow',
-            'class': openPowClass },
+            className: openPowClass },
           React.createElement(
             'h1',
             null,
